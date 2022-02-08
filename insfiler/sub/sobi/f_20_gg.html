@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>f_20_gg</title>
+	<style type="text/css">
+		
+		body{
+			background-color: #F9FAFC;
+		}
+		.header-container{
+			margin: 80px 70px 0px 70px;
+		}
+		.tag-container{
+			padding: 40px 0px 0px 70px;
+		}
+		.button-container{
+			margin: 10px 0px 0px 65px;
+			padding: 0px 0px 5px 5px;
+			overflow: hidden;
+		}
+		.buttons{
+			background-color: #FFFFFF;
+			margin: 20px 20px 0px 0px;
+			padding: 20px 20px 20px 20px;
+			outline: 0;
+			border-radius: 10px;
+			float: left;
+			width: 550px;
+			height: 100px;
+			box-shadow: 0px 1px 3px gray;
+		}
+		.buttons:hover{
+			box-shadow: 0px 1px 15px gray;
+		}
+		.in-button-img{
+			float:left;
+			
+		}
+		.in-button-text{
+			float: left;
+			margin: 0px 0px 0px 50px;
+			padding: 0px;
+			
+		}
+		.img-top{
+			float: left;
+			margin-right: 20px;
+			width:35px;
+			clear: both;
+		}
+		.tag-button{
+			background-color: #FFFFFF;
+			border:none;
+			padding: 8px 15px;
+			margin: 0px 0px;
+			outline: 0;
+			border-radius: 4px;
+			display: inline-block;
+		}
+		.tag-button:hover{
+			background-color: #F5F5F5;
+
+		}
+		.tag-button-all{
+			color: white;
+			background-color: #f44336;
+			border:none;
+			padding: 8px 15px;
+			margin: 0px 0px;
+			outline: 0;
+			border-radius: 4px;
+			display: inline-block;
+		}
+	</style>
+	<script type="text/javascript">
+		function clicked(obj){
+			var getValue = obj;
+			var add = getValue+".html";
+			window.location.href=add;
+		}
+		
+	</script>
+</head>
+<body>
+	<div class="header-container">
+		<img src="./img/female.png" class="img-top">
+		<span style="font-size: 15px; color:#323297">경기도 / 20대 / 여성</span><br>
+		<span style="font-size: 24px; font-weight: bold">소비·지출</span>
+	</div>
+
+	<div class="tag-container">
+		<button class="tag-button-all" type="button">#전체</button>
+		<button class="tag-button" type="button">#소비패턴</button>
+		<button class="tag-button" type="button">#카드사용</button>
+	</div>
+
+	<div class="button-container">
+		<div id="f_20_gg_gagu" class="buttons" onclick="clicked(this.id)">
+			<img class="in-button-img" src="./img/chart.png">
+			<div class="in-button-text">
+				<span style="font-weight: bold">가구의 재정이 악화되면 가장 먼저 소비를 줄일 항목</span><br><br>
+				<span style="font-size: 12px; color:gray">Source 2017 통계청</span><br>
+				<span style="font-size: 12px; color:gray">#소비</span>
+			</div>
+		</div>
+		<div id="f_20_gg_time" class="buttons" onclick="clicked(this.id)">
+			<img class="in-button-img" src="./img/graph.png">
+			<div class="in-button-text">
+				<span style="font-weight: bold">카드사용 : 시간별</span><br><br>
+				<span style="font-size: 12px; color:gray">Source 201908 KB국민카드</span><br>
+				<span style="font-size: 12px; color:gray">#소비패턴 #카드사용</span>
+			</div>
+		</div>
+		<div id="f_20_gg_week" class="buttons" style="clear:left" onclick="clicked(this.id)">
+			<img class="in-button-img" src="./img/graph.png">
+			<div class="in-button-text">
+				<span style="font-weight: bold">카드사용 : 요일별</span><br><br>
+				<span style="font-size: 12px; color:gray">Source 201908 KB국민카드</span><br>
+				<span style="font-size: 12px; color:gray">#소비패턴 #카드사용</span>
+			</div>
+		</div>
+		<div id="f_20_gg_month" class="buttons" onclick="clicked(this.id)">
+			<img class="in-button-img" src="./img/bubble.png">
+			<div class="in-button-text">
+				<span style="font-weight: bold">카드사용 : 월전체</span><br><br>
+				<span style="font-size: 12px; color:gray">Source 201908 KB국민카드</span><br>
+				<span style="font-size: 12px; color:gray">#소비패턴 #카드사용</span>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

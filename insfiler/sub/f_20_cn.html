@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>f_20_cn</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		.frame{
+			margin:auto;
+		}
+		.header{
+			width: 100%;
+			height: 55px;
+			position: fixed;
+			border-bottom: 1px solid #E9E9E9;
+		}
+		.container{
+			overflow: hidden;
+			position: fixed;
+
+		}
+		.category{
+			width: 355px;
+			height: 100%;
+			top:55px;
+			border-right: 1px solid #E9E9E9;
+			position: fixed;
+		}
+		.content{
+			width: 83%;
+			height: 100%;
+			top:55px;
+			left: 355px;
+			position: fixed;
+			border:none;
+		}
+		iframe{
+			border-top: 1px solid #E9E9E9;
+			border-left: 1px solid #E9E9E9;
+		}
+		img{
+			width: 107px;
+			margin:16px 0px 16px 32px;
+		}
+		h4{
+			padding: 5px 0px 25px 32px;
+			border-bottom: 1px solid #E9E9E9;
+		}
+		input{
+			display: none;
+		}
+		input[type=radio]+label{
+			display: inline-block;
+			margin:0px;
+			padding: 10px 0px 0px 32px;
+			border:0;
+			outline: 0;
+			width: 355px;
+			height: 30px;
+			text-align: left;
+			font-size: 14px;
+			cursor: pointer;
+		}
+		input:checked + label{
+			background-color: #323297;
+			color:#FFFFFF;
+			font-weight: bold;
+		}
+	</style>
+	<script type="text/javascript">
+		function clicked_sobi(){
+			var ifr = document.getElementById('ifra');
+			ifr.src="./sobi/f_20_cn.html";
+		}
+		function clicked_profile(){
+			var ifr = document.getElementById('ifra');
+			ifr.src="./profile/f_20_cn.html";
+		}
+	</script>
+</head>
+<body>
+
+	<div class="frame">
+		<div class="header">
+		<img src="./profile/logo.png">
+		</div>
+		<div class="container">
+			<div class="category">
+				<h4>데이터 카테고리</h4>
+				<form>
+					<input type="radio" id = "summary" name = "cbutton" checked="" onclick="clicked_profile()"><label for="summary">프로파일 요약</label></button>
+					<input type="radio" id = "all" name = "cbutton" disabled="disabled"><label for="all">전체</label></button>	
+					<input type="radio" id = "population" name = "cbutton" disabled="disabled"><label for = "population">인구일반</label></button>
+					<input type="radio" id = "living" name = "cbutton" disabled="disabled"><label for = "living">생활·습관</label></button>
+					<input type="radio" id = "health" name = "cbutton" disabled="disabled"><label for = "health">건강·신체</label></button>
+					<input type="radio" id = "consumption" name = "cbutton" onclick="clicked_sobi()"><label for = "consumption">소비·지출</label></button>
+					<input type="radio" id = "income" name = "cbutton" disabled="disabled"><label for = "income">소득·금융</label></button>
+					<input type="radio" id = "culture" name = "cbutton" disabled="disabled"><label for = "culture">문화·여가</label></button>
+					<input type="radio" id = "preference" name = "cbutton" disabled="disabled"><label for ="preference">선호성향</label></button>
+					<input type="radio" id = "self" name = "cbutton" disabled="disabled"><label for = "self">자기평가</label></button>
+					<input type="radio" id = "viewpoint" name = "cbutton" disabled="disabled"><label for = "viewpoint">가치관·견해</label></button>
+					<input type="radio" id = "etc" name = "cbutton" disabled="disabled"><label for = "etc">기타</label></button>
+				</form>				
+			<div class="content">
+				<iframe id="ifra" src="./profile/f_20_cn.html" width="100%" height="100%"></iframe>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

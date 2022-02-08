@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>insfiler</title>
+
+   <style type="text/css">
+     body{
+      background-image : url('imge/mainbackground.png');
+      background-repeat:  no-repeat; 
+      background-size: 150%
+   }
+
+</style>
+<style type="text/css"  id="s1">
+   
+   .container--fade1 {
+      opacity:.3
+   }
+</style>
+<style type="text/css"  id="s2">
+   
+   .container--fade2 {
+      opacity:.3
+   }
+</style>
+<style type="text/css"  id="s3">
+   
+   .container--fade3 {
+      opacity:.3
+      
+   }
+</style>
+<script type="text/javascript">
+   var selected="";
+   var gender="";
+   var age="";
+   var region="";
+
+   function select_gender(g) {
+      gender=document.getElementById(g).value;
+      document.getElementById('s1').disabled = true;
+      
+
+      // body...
+   }
+   function selecet_age(a){
+     age=document.getElementById(a).value;
+     document.getElementById('s2').disabled = true;
+  }
+  function selecet_regin(r){
+     region=document.getElementById(r).value;;
+     document.getElementById('s3').disabled = true;
+  }
+  function search(){
+   selected="./sub/"+gender+"_"+age+"_"+region+".html";
+   window.location.href=selected;
+}
+
+</script>
+
+<link rel="stylesheet" href="imge/maincss.css">
+</head>
+<body class="mainalign">
+
+   <div class="nav-wrapper">
+      <div class="logo">
+         <a  href="main test.html">
+            <img  src="imge/logo-dark.png">
+         </a>
+      </div>
+      
+      <button  id="loginButton" type="button" class="loginbutton" >
+         <font color="white" size="4px" >로그인</font>
+      </button>
+      
+   </div>
+   
+   <section  id="search-section">
+    <div id ="search-section-container">  
+      <div  id="section-top">
+         <div class="page-guide">
+           <p class="page-title">인스파일러에서 탐색하고 싶은 프로파일을 찾아보세요<p>
+            <br>
+
+            <p class="guide">성별을 선택해주세요<p>
+            </div>
+         </div>
+         <div  class="search-panel">
+            
+            <div id=gender-panel  >
+               <p >
+                  <font size="5">성별</font></p>
+                  <div >
+                     <div class="genderlabel" id="kk">
+                       <input type="radio" name ="g" id="gender-m" value="m" onclick="select_gender(this.id)">
+                       <label for="gender-m"  class="select-label"  >
+                        <img src="imge/ic-gender-male.75df9b27.svg"  >      
+                        <p>남성</p>
+                     </label>
+                  </div>
+                  <br>
+                  <div class="genderlabel" >
+                     <input type="radio"  name="g"id="gender-f" value="f" onclick="select_gender(this.id)">
+                     <label for="gender-f" class="select-label" >
+                      <img src="imge/ic-gender-female.ed97fbd7.svg">
+                      여성
+                   </label>
+                </div>
+             </div>
+          </div>
+          
+
+
+
+          <div id="age-panel" class="container--fade1">
+            <p >
+             <font size="5">연령</font></p>
+             <div class="age-container">
+               <div class="input-radio-rect" id="column-left" >
+                  <input type="radio" id="age-1519" name="age" value="10" onclick="selecet_age(this.id)" >
+                  <label for="age-1519" >
+                     <p >
+                     10대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="age-2024" name="age" value="20" onclick="selecet_age(this.id)" >
+                  <label for="age-2024" >
+                     <p >
+                     20대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="age-2529" name="age" value="30" onclick="selecet_age(this.id)" >
+                  <label for="age-2529">
+                     <p >
+                     30대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect"  >
+                  <input type="radio" id="age-3034" name="age" value="40" onclick="selecet_age(this.id)">
+                  <label for="age-3034" >
+                     <p >
+                     40대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="age-3539" name="age" value="50" onclick="selecet_age(this.id)">
+                  <label for="age-3539">
+                     <p >
+                     50대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="age-4044" name="age" value="60"  onclick="selecet_age(this.id)">
+                  <label for="age-4044">
+                     <p >
+                     60대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="age-4549" name="age" value="70"  onclick="selecet_age(this.id)">
+                  <label for="age-4549" >
+                     <p >
+                     70대</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect " >
+                  <input type="radio" id="age-5054" name="age" value="80"  onclick="selecet_age(this.id)">
+                  <label for="age-5054" >
+                     <p >
+                     80대</p>
+                  </label>
+               </div>
+               
+
+            </div>
+         </div>
+
+
+
+
+
+         <div id="region-panel" class="container--fade2">
+            <p >
+             <font size="5">지역</font></p>
+             <div class="age-container">
+               <div class="input-radio-rect" id="column-left" >
+                  <input type="radio" id="region-st" name="region" value="st" onclick="selecet_regin(this.id)" >
+                  <label for="region-st" >
+                     <p >
+                     서울특별시</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="region-bk" name="region" value="bk"  onclick="selecet_regin(this.id)">
+                  <label for="region-bk" >
+                     <p >
+                     부산광역시</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="region-dk" name="region" value="dk"  onclick="selecet_regin(this.id)">
+                  <label for="region-dk">
+                     <p >
+                     대구광역시</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect"  >
+                  <input type="radio" id="region-ik" name="region" value="ik"  onclick="selecet_regin(this.id)">
+                  <label for="region-ik" >
+                     <p >
+                     인천광역시</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="region-kk" name="region" value="kk" onclick="selecet_regin(this.id)">
+                  <label for="region-kk">
+                     <p >
+                     광주광역시</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect">
+                  <input type="radio" id="region-uk" name="region" value="uk" onclick="selecet_regin(this.id)">
+                  <label for="region-uk" >
+                     <p >
+                     울산광역시</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect"id="column-left" >
+                  <input type="radio" id="region-kn" name="region" value="kn"  onclick="selecet_regin(this.id)">
+                  <label for="region-kn">
+                     <p >
+                     경상남도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="region-dj" name="region" value="dj"  onclick="selecet_regin(this.id)">
+                  <label for="region-dj" >
+                     <p >
+                     대전광역시</p>
+                  </label>
+               </div>
+               
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="region-gg" name="region" value="gg" onclick="selecet_regin(this.id)">
+                  <label for="region-gg" >
+                     <p >
+                     경기도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="region-ku" name="region" value="ku" onclick="selecet_regin(this.id)">
+                  <label for="region-ku">
+                     <p >
+                     강원도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="region-cb" name="region"value="cb" onclick="selecet_regin(this.id)">
+                  <label for="region-cb" >
+                     <p >
+                     충청북도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="region-cn" name="region" value="cn" onclick="selecet_regin(this.id)">
+                  <label for="region-cn">
+                     <p >
+                     충청남도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="region-jb" name="region" value="jb" onclick="selecet_regin(this.id)">
+                  <label for="region-jb" >
+                     <p >
+                     전라북도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect" >
+                  <input type="radio" id="region-jn" name="region" value="jn" onclick="selecet_regin(this.id)">
+                  <label for="region-jn">
+                     <p >
+                     전라남도</p>
+                  </label>
+               </div>
+
+               
+               <div class="input-radio-rect" id="column-left">
+                  <input type="radio" id="region-kb" name="region" value="kb" onclick="selecet_regin(this.id)">
+                  <label for="region-kb" >
+                     <p >
+                     경상북도</p>
+                  </label>
+               </div>
+               
+               <div class="input-radio-rect" >
+                  <input type="radio" id="region-jj" name="region" value="jj" onclick="selecet_regin(this.id)">
+                  <label for="region-jj" >
+                     <p >
+                     제주특별자치도</p>
+                  </label>
+               </div>
+               <div class="input-radio-rect"id="column-left" >
+                  <input type="radio" id="region-all" name="region" value="all" onclick="selecet_regin(this.id)">
+                  <label for="region-all">
+                     <p >
+                     전국</p>
+                  </label>
+               </div>
+
+            </div>
+         </div>
+         
+         <div  id="search-panel" class="container--fade3">
+            <div id="condition-text" class="hidden">
+               <span >
+                  <!---->
+                  <br >
+                  <script type="text/javascript">
+                    document.write()
+                 </script>
+                 <br data-v-0c950a9b="">
+              </span>
+           </div>
+           <button  id ="search-button" onclick="search()">
+            
+            프로파일 검색
+            
+            <img  src="imge/ic-search-bold.svg"></button>
+         </div>
+      </div>
+      
+   </div>
+</section>
+<section>
+   <div style="float: right;">
+      <a href="https://www.instagram.com/?hl=ko"><img src="./imge/instagram.png" style="width: 40px"></a>
+      <a href="https://ko-kr.facebook.com/"><img src="./imge/facebook.png" style="width: 40px"></a>
+      <a href="https://twitter.com/?lang=ko"><img src="./imge/twitter.png" style="width: 40px"></a>
+   </div>
+</section>
+</body>
+</html>
